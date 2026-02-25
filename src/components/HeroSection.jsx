@@ -175,8 +175,11 @@ export default function HeroSection() {
             {/* Main Content — Parallax Zoom Layer */}
             <div
                 ref={contentRef}
-                className="hero-parallax relative z-10 h-full max-w-[1440px] mx-auto px-5 md:px-8 lg:px-20 flex flex-col justify-end pb-28 lg:pb-36"
+                className="hero-parallax relative z-10 h-full max-w-[1440px] mx-auto px-5 md:px-8 lg:px-20 flex flex-col pt-[120px] pb-20 lg:pb-28 overflow-hidden"
             >
+                {/* Spacer pushes content to bottom without upward overflow */}
+                <div className="flex-1 min-h-0" />
+
                 {/* Weather Pill */}
                 <RevealLine delay={0} revealed={revealed}>
                     <WeatherPill temp={d.weather.temp} condition={d.weather.condition} location={d.location} bestTime={d.weather.bestTime} />
