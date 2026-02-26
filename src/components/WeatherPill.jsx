@@ -8,7 +8,7 @@ export default function WeatherPill({ weather, location, temp, condition, bestTi
             <span className="text-base">{w.condition}</span>
             <span className="font-mono text-base text-white">{w.temp}°C</span>
             <span className="w-px h-4 bg-white/18" />
-            <span className="font-body text-xs text-white/75">{location}</span>
+            <span className="font-body text-xs text-white/30">{location}</span>
             {w.bestTime && (
                 <>
                     <span className="w-px h-4 bg-white/18" />
